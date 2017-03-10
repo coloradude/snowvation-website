@@ -1,1 +1,16 @@
-index.pug
+extends ./html/layout.pug
+
+block content
+  .parallax-container
+    .parallax
+      img(src='https://www.skicoupons.com/winter/wp-content/uploads/2014/01/Family-Skiing.jpg')
+  .section.white
+    .row.container
+      h2.header Parralax
+    p.grey-text.text-darken-3.lighten-3 Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.
+  .parallax-container
+    .parallax
+      img(src='http://news.uic.edu/files/2014/09/assignments.jpg')
+
+block foot
+  script(src='/js/home.js' type='text/javascript')

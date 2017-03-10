@@ -7,7 +7,7 @@ const pug = require('gulp-pug')
 const babel = require('gulp-babel')
 
 gulp.task('js', function(){
-  return gulp.src('src/js/app.js', { read: false })
+  return gulp.src('src/js/*.js', { read: false })
     .pipe(plumber())
     .pipe(browserify())
     .pipe(babel({
@@ -17,7 +17,7 @@ gulp.task('js', function(){
 })
 
 gulp.task('css', function(){
-  return gulp.src('src/styles.styl')
+  return gulp.src('src/css/*.styl')
     .pipe(plumber())
     .pipe(stylus({errors: true, 'include css': true}))
     .pipe(autoprefixer())
@@ -25,7 +25,7 @@ gulp.task('css', function(){
 })
 
 gulp.task('html', function(){
-  return gulp.src('src/index.pug')
+  return gulp.src('src/*.pug')
     .pipe(plumber())
     .pipe(pug({pretty: true}))
     .pipe(gulp.dest('dist'))
@@ -34,6 +34,7 @@ gulp.task('html', function(){
 gulp.task('watch', function(){
   gulp.watch('src/js/*.js', ['js'])
   gulp.watch('src/*.pug', ['html'])
+  gulp.watch('src/html/*.pug', ['html'])
   gulp.watch('src/css/*.styl', ['css'])
 })
 

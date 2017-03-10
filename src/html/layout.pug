@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    link(href='/css/styles.css' rel='stylesheet')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  body    
+    nav.light-blue.lighten-1
+      .nav-wrapper
+        a.brand-logo(href='/') Rental Rocket
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+            a(href='/') Home
+          li
+            a(href='rentals.html') Rentals
+    block content
+  foot
+    block foot

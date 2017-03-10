@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browserify-shim": "^3.8.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
@@ -18,6 +19,24 @@
     "gulp-stylus": "^2.6.0"
   },
   "dependencies": {
+    "babel-preset-es2017": "^6.22.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "materialize-css": "^0.98.0",
     "mithril": "^1.0.1"
-  }
+  },
+
+  "browser": {
+  "jquery": "./node_modules/jquery/dist/jquery.js",
+  "materialize": "./node_modules/materialize-css/bin/materialize.js"
+},
+"browserify-shim": {
+  "jquery": "$",
+  "materialize": "materialize"
+},
+"browserify": {
+  "transform": [
+    "browserify-shim"
+  ]
+}
 }
