@@ -1,7 +1,12 @@
 const m = require('mithril')
+const $ = require('jquery')
+const Router = window.Router = require('./router/router')
 
-// m.route(root, '/',{
-//   '/runs', Runs
-// })
+require('materialize-css')
+require('./utilities/parallax.js')
 
-console.log('yo')
+$(document).ready(() => {
+  $('.parallax').parallax()
+})
+
+Router.mountApp()

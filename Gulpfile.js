@@ -33,6 +33,7 @@ gulp.task('html', function(){
 
 gulp.task('watch', function(){
   gulp.watch('src/js/*.js', ['js'])
+  gulp.watch('src/*/*.js', ['js'])
   gulp.watch('src/*.pug', ['html'])
   gulp.watch('src/html/*.pug', ['html'])
   gulp.watch('src/css/*.styl', ['css'])
