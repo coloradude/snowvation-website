@@ -1,7 +1,6 @@
 *
   box-sizing border-box
 
-@import 'normalize.css'
 @import 'materialize.css'
 
 nav
@@ -16,15 +15,26 @@ nav
   .col
     width calc(33% - 40px)
     margin 20px
-    // transition all .1s ease-in-out
-    // &:hover
-    //   transform scale(1.025)
-    //   box-shadow 0px 0px 18px 0px rgba(0,0,0,0.75)
-  // .card
-  //   margin 0
     
 .flex-center
   width 100%
   display flex
   justify-content center
   align-items center
+  
+.flex-between
+  width 100%
+  display flex
+  justify-content space-between
+  align-items center
+  * 
+    margin 0 20px
+  
+.btn-floating .material-icons
+  display flex
+  justify-content center
+  align-items center
+  width initial
+
+.action
+  pointer cursor
