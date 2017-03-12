@@ -1,9 +1,9 @@
 const m = require('mithril')
 
-const EquiptmentPage = {}
+const Equiptment = {}
 
 EquiptmentPage.view = () => {
   return m('div', 'Hello world')
 }
 
-module.exports = EquiptmentPage
+module.exports = Equiptment
