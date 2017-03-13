@@ -11,10 +11,10 @@ Card.view = (vnode) => {
         ]),
         m(".card-content", [
           m("span.card-title.grey-text.text-darken-4", vnode.attrs.brand + ' ' + vnode.attrs.model),
-          m('span.card-title.light-blue-text.text-lighten-1', '$' + vnode.attrs.price)
+          m('span.card-title.light-blue-text.text-lighten-1', '$' + vnode.attrs.price + '/day')
         ]),
         m(".card-action", [
-          m("a[href='#']", "This is a link")
+          m("a[href=#!/equiptment/" + vnode.attrs._id + "]", "Book this item")
         ])
       ])
     ])

@@ -9,7 +9,7 @@ const Router = {}
 Router.mountApp = () => {
   m.route(document.querySelector('#app'), '/', {
     '/': Home,
-    '/rentals': Rentals,
+    '/equiptment': Rentals,
     '/equiptment/:_id': Equiptment
   })
 }

@@ -2,12 +2,12 @@ const m = require('mithril')
 const $ = require('jquery')
 const API = require('../api/api')
 
-const AddItemModal = {}
+const EditItemModal = {}
 
-AddItemModal.view = (vnode) => {
+EditItemModal.view = (vnode) => {
   return [m(".modal[id='modal1']", [
     m(".modal-content", [
-      m("h4", "Add new equiptment"),
+      m("h4", "Edit this equiptment"),
       m('.input-field',
         m("input.validate[id=brand][type=text]", {
           oninput: m.withAttr('value', (brand) => vnode.state.brand = brand)
@@ -41,18 +41,18 @@ AddItemModal.view = (vnode) => {
     ]),
     m(".modal-footer", [
       m("a.modal-action.modal-close.waves-effect.waves-green.btn-flat[href='javascript:void(0)']", {
-        onclick: () => API.addEquiptment(vnode.state).then(() => window.location.reload())
+        onclick: () => API.patchEquiptment(vnode.state).then(() => window.location.reload())
       }, "Submit")
     ])
   ])]
 }
 
-AddItemModal.oncreate = () => {
+EditItemModal.oncreate = () => {
   $('.modal').modal()
   $('#modal1').modal('open')
 }
 
-AddItemModal.onbeforeremove = () => {
+EditItemModal.onbeforeremove = () => {
   $('#modal1').modal('close')
 }
-module.exports = AddItemModal
+module.exports = EditItemModal

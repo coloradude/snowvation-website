@@ -2,49 +2,27 @@ const m = require('mithril')
 const Footer = require('../components/footer')
 const Card = require('../components/card')
 const AddItemModal = require('../components/addItemModal')
-// const SelectForm = require('../controls/selectForm')
+const API = require('../api/api')
 
 const Main = {}
 
-const data = [
-  {
-    brand: 'Brandname',
-    price: 45,
-    model: 'Skis',
-    imageUrl: 'http://images.sportsdirect.com/images/products/92273816_l.jpg'
-  },
-  {
-    brand: 'Brandname',
-    price: 45,
-    model: 'Skis',
-    imageUrl: 'http://images.sportsdirect.com/images/products/92273816_l.jpg'
-  },
-  {
-    brand: 'Brandname',
-    price: 45,
-    model: 'Skis',
-    imageUrl: 'http://images.sportsdirect.com/images/products/92273816_l.jpg'
-  },
-  {
-    brand: 'Brandname',
-    price: 45,
-    model: 'Skis',
-    imageUrl: 'http://images.sportsdirect.com/images/products/92273816_l.jpg'
-  }
-]
+Main.oninit = (vnode) => {
+  vnode.state = []
+  API.getAllEquiptment().then((data) => vnode.state = data)
+}
 
-Main.view = () => {
+Main.view = (vnode) => {
   return [m('.container',
     m('h2.flex-between', m('span', 'Rentals'), 
-      m("a.btn-floating.btn-large.waves-effect.waves-light.green.right-align", 
-        {onclick: () => {
+      m("a.btn-floating.btn-large.waves-effect.waves-light.green.right-align", {
+        onclick: () => {
           m.mount(document.querySelector('#modal'), AddItemModal)
         }},
         m("i.material-icons", "add")
       )
     ),
     m('.flex-container',
-      data.map((item, i) => m(Card, item))  
+      vnode.state.map((item, i) => m(Card, item))  
     )
   ),
   m(Footer),

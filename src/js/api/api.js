@@ -2,16 +2,18 @@ const m = require('mithril')
 
 const API = {}
 
-API.getRentals = () => {
+const serverURL = process.env.SERVER_URL || 'http://localhost:3000/equiptment/'
+
+API.getAllEquiptment = () => {
   return m.request({
-    url: ''
+    url: serverURL,
     method: 'GET'
   })
 }
 
-API.saveEquiptment = (data) => {
+API.addEquiptment = (data) => {
   return m.request({
-    url: ''
+    url: serverURL,
     method: 'POST',
     data: data
   })
@@ -19,22 +21,23 @@ API.saveEquiptment = (data) => {
 
 API.getEquiptment = (_id) => {
   return m.request({
-    url: '' + _id
+    url: serverURL + _id,
     method: 'GET'
   })
 }
 
-API.deleteEquiptment = (_id) => {
+API.deleteEquiptment = (equiptment) => {
   return m.request({
-    url: '' + _id.
+    url: serverURL + equiptment._id,
     method: 'DELETE',
   })
 }
 
-API.patchEquiptment = (_id) => {
+API.patchEquiptment = (equiptment) => {
   return m.request({
-    url: '' + _id,
-    method: 'PATCH'
+    url: serverURL + equiptment._id,
+    method: 'PATCH',
+    body: equiptment
   })
 }
 

@@ -15,7 +15,7 @@ Home.view = () => {
           m(".row.center", [
             m("h5.header.col.s12.grey-text.text-darken-1", "Track, manage, and understand your ski and snowboard rentals")
           ]),
-          m(".row.center", [m("a.btn-large.waves-effect.waves-light.teal.lighten-1[href='#!/rentals'][id='download-button']", "Get Started")]),
+          m(".row.center", [m("a.btn-large.waves-effect.waves-light.teal.lighten-1[href='#!/equiptment'][id='download-button']", "Get Started")]),
           m("br"),
           m("br")
         ])
