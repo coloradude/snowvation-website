@@ -28,22 +28,22 @@ Home.view = () => {
           m(".col.s12.m4", [
             m(".icon-block", [
               m("h2.center.brown-text", [m("i.material-icons", "flash_on")]),
-              m("h5.center", "Speeds up development"),
-              m("p.light", "We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.")
+              m("h5.center", "Customizable"),
+              m("p.light", "Chicharrones chartreuse blue bottle, photo booth godard etsy schlitz quinoa artisan semiotics +1 farm-to-table vaporware ethical. Retro snackwave plaid, tacos locavore pug YOLO celiac. Mixtape PBR&B schlitz, tattooed taxidermy vexillologist tofu knausgaard pok pok retro. Coloring book cold-pressed deep v seitan shabby chic green juice. ")
             ])
           ]),
           m(".col.s12.m4", [
             m(".icon-block", [
               m("h2.center.brown-text", [m("i.material-icons", "group")]),
               m("h5.center", "User Experience Focused"),
-              m("p.light", "By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.")
+              m("p.light", "Everyday carry edison bulb readymade, waistcoat umami fanny pack brooklyn blog keytar fashion axe copper mug banjo blue bottle. Tbh pinterest schlitz next level, actually umami chia man bun yr beard iPhone selvage waistcoat meh gentrify.")
             ])
           ]),
           m(".col.s12.m4", [
             m(".icon-block", [
               m("h2.center.brown-text", [m("i.material-icons", "settings")]),
               m("h5.center", "Easy to work with"),
-              m("p.light", "We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.")
+              m("p.light", "Activated charcoal enamel pin drinking vinegar whatever, stumptown gastropub lomo kinfolk bushwick VHS. Everyday carry chia iPhone readymade ugh. Salvia crucifix mustache post-ironic humblebrag meditation. ")
             ])
           ])
         ])
@@ -53,7 +53,7 @@ Home.view = () => {
       m(".section.no-pad-bot", [
         m(".container", [
           m(".row.center", [
-            m("h5.header.col.s12.light", "A modern responsive front-end framework based on Material Design")
+            m("h5.header.col.s12.light", "A modern web app to help you manage your rental fleet")
           ])
         ])
       ]),
@@ -69,16 +69,6 @@ Home.view = () => {
           ])
         ])
       ])
-    ]),
-    m(".parallax-container.valign-wrapper", [
-      m(".section.no-pad-bot", [
-        m(".container", [
-          m(".row.center", [
-            m("h5.header.col.s12.light", "A modern responsive front-end framework based on Material Design")
-          ])
-        ])
-      ]),
-      m(".parallax", [m("img[alt='Unsplashed background img 3'][src='background3.jpg']")])
     ]),
     m(Footer)
   ]

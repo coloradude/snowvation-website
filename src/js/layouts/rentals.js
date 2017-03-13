@@ -14,7 +14,7 @@ Main.oninit = (vnode) => {
 Main.view = (vnode) => {
   return [m('.container',
     m('h2.flex-between', m('span', 'Rentals'), 
-      m("a.btn-floating.btn-large.waves-effect.waves-light.green.right-align", {
+      m("a.hoverable.btn-floating.btn-large.waves-effect.waves-light.green.right-align", {
         onclick: () => {
           m.mount(document.querySelector('#modal'), AddItemModal)
         }},

@@ -16,17 +16,15 @@ Equiptment.view = (vnode) => {
       m('.card.equiptment-card',
         m('.card-image',
           m('.equiptment-modify-container',
-            m("a.btn-floating.btn-large.waves-effect.waves-light.blue", {
+            m("a.hoverable.btn-floating.btn-large.waves-effect.waves-light.blue", {
               onclick: () => {
                 m.mount(document.querySelector('#modal'), EditItemModal)
               }},
               m("i.material-icons", "edit")
             ),
-            m("a.btn-floating.btn-large.waves-effect.waves-light.red.right-align",{
+            m("a.hoverable.btn-floating.btn-large.waves-effect.waves-light.red.right-align",{
               onclick: () => {
-                console.log(vnode)
                 const confirm = window.confirm('Are you sure you want to delete this item?')
-                console.log('hey')
                 if (confirm) {
                   API.deleteEquiptment(vnode.attrs).then(() => m.route.set('/equiptment'))
                 }
@@ -41,6 +39,9 @@ Equiptment.view = (vnode) => {
             m('span.card-title.light-blue-text.text-lighten-1', ' $' + vnode.state.price + '/day')
           ),
           m('p', vnode.state.description)
+        ),
+        m('.card-action',
+          m('a', {href: 'javascript:void(0)'}, 'Book this item')
         )
       )
     )
