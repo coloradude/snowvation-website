@@ -2,7 +2,7 @@ const m = require('mithril')
 
 const API = {}
 
-const serverURL = process.env.SERVER_URL || 'http://localhost:3000/equiptment/'
+const serverURL = process.env.SERVER_URL || 'http://ec2-54-201-81-185.us-west-2.compute.amazonaws.com:3000/'
 
 API.getAllEquiptment = () => {
   return m.request({
