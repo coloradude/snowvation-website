@@ -2,7 +2,7 @@ const m = require('mithril')
 
 const API = {}
 
-const serverURL = process.env.SERVER_URL || 'http://ec2-54-201-81-185.us-west-2.compute.amazonaws.com:3000/'
+const serverURL = process.env.SERVER_URL || 'https://pure-ridge-68156.herokuapp.com/equiptment/'
 
 API.getAllEquiptment = () => {
   return m.request({
